@@ -30,7 +30,7 @@ contract Wallet{
     function financeWithdraw(uint256 _val) public payable{
         require(finance==msg.sender);
         msg.sender.transfer(_val*1 ether);
-        financeValue-=_val;
+        financeValue-=(_val*1 ether);
     }
     
     function createEmployee(string memory _name, string memory _grade) public{
